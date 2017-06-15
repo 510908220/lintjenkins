@@ -25,10 +25,32 @@ jenkins pylint api.
 * Documentation: https://lintjenkins.readthedocs.io.
 
 
-Features
+Example
 --------
+.. code-block:: python
 
-* TODO
+   In [2]: from lintjenkins import LintJenkins
+
+   In [3]: lint_jenkins = LintJenkins('http://x.x.x.x:8080', username='username', password='password')
+
+   In [4]: lint_jenkins.add_job(svn = 'svn', username='username', password='password',job_name='aliyun')
+
+   In [7]: lint_jenkins.get_build_numbers('aliyun')
+   Out[7]: [2, 1]
+
+   In [8]: lint_jenkins.get_build_info('aliyun',2)
+   Out[8]: 
+   {
+   'commits': [],
+   'datetime': '2017-06-16 10:22:33',
+   'duration': 47.478,
+   'result': 'UNSTABLE',
+   'result_url': 'http://x.x.x.x:8080/job/aliyun/2/violations/',
+   'revisions': [{'module': 'svn','revision': 18977}],
+   'violation_info': {'violation_file_num': 80, 'violation_num': 2027}
+   }
+
+
 
 Credits
 ---------
