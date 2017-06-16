@@ -56,16 +56,44 @@ Example
 
    In [8]: lint_jenkins.get_build_info('aliyun',2)
    Out[8]: 
-   {
-   'commits': [],
-   'datetime': '2017-06-16 10:22:33',
-   'duration': 47.478,
-   'result': 'UNSTABLE',
-   'result_url': 'http://x.x.x.x:8080/job/aliyun/2/violations/',
-   'revisions': [{'module': 'svn','revision': 18977}],
-   'violation_info': {'violation_file_num': 80, 'violation_num': 2027}
-   }
+        {
+            "violation_info": {
+                "violation_num": 2027,
+                "violation_file_num": 80
+            },
+            "commits": [
+                {
+                    "msg": "svn提交信息",
+                    "paths": [
+                        {
+                            "editType": "add",
+                            "file": "新增的文件"
+                        },
+                        {
+                            "editType": "edit",
+                            "file": "编辑的文件"
+                        }
+                    ],
+                    "revision": 18830,
+                    "datetime": "2017-06-12 09:44:38",
+                    "author": "huzhongzhong"
+                }
+            ],
+            "datetime": "2017-06-12 09:55:13",
+            "result_url":'http://x.x.x.x:8080/job/job_name/7/violations/'
+            "result": "UNSTABLE",
+            "duration": 49,
+            "revisions": [
+                {
+                    "module": "svn地址",
+                    "revision": 18830
+                }
+            ]
+        }
 
+字段说明:
+
+.. image:: filed.png
 
 对应的在jenkins上的表现是:
 
