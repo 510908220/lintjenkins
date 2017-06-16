@@ -51,6 +51,7 @@ Example
    }
 
 对应的在jenkins上的表现是:
+
 .. image:: lintjenkins.png
         :target: 
 
