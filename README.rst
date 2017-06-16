@@ -24,6 +24,22 @@ jenkins pylint api.
 * Free software: MIT license
 * Documentation: https://lintjenkins.readthedocs.io.
 
+Require
+--------
+
+1. **目标机器装有jenkins+violations**
+
+2. **被检查的python代码所在目录符合包的形式,如**:
+
+    - `__init__.py`
+    - `requirements.txt`
+    - `pylint.cfg`
+
+3. **pylint配置文件也需要修改**.
+
+    - 没有配置可以使用`pylint --generate-rcfile > pylint.cfg`生成配置.
+    - 将`output-format`项的值改为`parseable`
+    - `init-hook`添加`'import sys; sys.path.append("/var/lib/jenkins/workspace/xxx")'`,`xxx`为jenkins job名. 否则会出现`W0403 Relative import 'xxxx'警告`
 
 Example
 --------
