@@ -18,7 +18,15 @@ lintjenkins
      :alt: Updates
 
 
-jenkins pylint api.
+lintjenkins 是干什么的? 这里举一个使用场景的例子. 我又一个django项目需要使用jenkins进行持续代码检查, 需要做的操作是:
+
+1. 在jenkins上创建一个job, 配置job 和violations等信息.
+2. 在配置job时，添加svn代码时,需要输入账号和密码进行验证
+3. 查看检查结果
+4. 当需要统计历史结果时, 只能手动去看一次次检查结果. 
+
+lintjenkins 就是将上述场景操作封装为接口,便于二次开发. 
+
 
 
 * Free software: MIT license
