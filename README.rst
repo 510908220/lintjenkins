@@ -50,6 +50,9 @@ Example
    'violation_info': {'violation_file_num': 80, 'violation_num': 2027}
    }
 
+对应的在jenkins上的表现是:
+.. image:: lintjenkins.png
+        :target: 
 
 
 Credits
