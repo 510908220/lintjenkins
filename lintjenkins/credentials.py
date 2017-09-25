@@ -60,7 +60,7 @@ class SvnCredentialManager(object):
     def get_svn_credential(self, svn, username, password):
         credential_id = self._get_or_create_svn_credential(
             svn, username, password)
-        if not self._check_credential(svn, credential_id):
-            del self.jenkins.credentials[self._get_svn_md5(svn)]
-            raise Exception("check credential failed")
+        # if not self._check_credential(svn, credential_id):
+        #     del self.jenkins.credentials[self._get_svn_md5(svn)]
+        #     raise Exception("check credential failed")
         return credential_id
