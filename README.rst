@@ -107,6 +107,13 @@ Example
 
 .. image:: lintjenkins.png
 
+注意
+---------
+
+- `Credentials Plugin`使用的是版本`2.1.16`
+- 如果报错`403 no valid crumb was included in the request `, 简单可以这样处理:`setup jenkins's "global security settings": Uncheck "Prevent Cross Site Request Forgery exploits"`
+
+
 
 Credits
 ---------
