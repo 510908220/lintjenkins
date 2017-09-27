@@ -253,3 +253,4 @@ pylint --load-plugins pylint_django --rcfile=${WORKSPACE}/pylint.cfg  ${WORKSPAC
   <buildWrappers/>
 </project>
 '''
+
