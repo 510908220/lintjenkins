@@ -47,11 +47,17 @@ source /opt/env/$JOB_NAME/bin/activate
 pip install pylint
 pip install pylint-django
 pip install -r ${WORKSPACE}/requirements.txt
-root_package_file=&quot;${WORKSPACE}/__init__.py&quot;
+ret_code=$?
+if [ $ret_code != 0 ]; then
+printf "Error : [%d] when executing command: '$cmnd'" $ret_code
+exit $ret_code
+fi
+root_package_file="${WORKSPACE}/__init__.py"
 if [ ! -f $root_package_file ]; then
     touch $root_package_file
 fi
-pylint --load-plugins pylint_django --rcfile=${WORKSPACE}/pylint.cfg  ${WORKSPACE} &gt; pylint.xml || exit 0
+pylint --load-plugins pylint_django --rcfile=${WORKSPACE}/pylint.cfg  ${WORKSPACE} > pylint.xml || exit 0
+
 </command>
     </hudson.tasks.Shell>
   </builders>
