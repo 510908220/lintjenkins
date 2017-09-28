@@ -30,7 +30,7 @@ test_requirements = [
 
 setup(
     name='lintjenkins',
-    version='0.1.10',
+    version='0.1.11',
     description="jenkins pylint api.",
     long_description=readme + '\n\n' + history,
     author="westdoorblowcola",
