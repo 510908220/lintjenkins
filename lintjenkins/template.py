@@ -40,8 +40,7 @@ JOB_CONFIG_PYLINT = '''<?xml version='1.0' encoding='UTF-8'?>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>
-#!/bin/bash
+<command>#!/bin/bash
 if [ ! -d /opt/env/$JOB_NAME ]; then
     virtualenv -p /usr/bin/python /opt/env/$JOB_NAME
 fi
@@ -255,4 +254,3 @@ pylint --load-plugins pylint_django --rcfile=${WORKSPACE}/pylint.cfg  ${WORKSPAC
   <buildWrappers/>
 </project>
 '''
-
